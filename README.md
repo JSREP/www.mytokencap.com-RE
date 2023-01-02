@@ -1,5 +1,11 @@
 # MyToken
 
+目标网址：
+
+```
+https://www.mytokencap.com/
+```
+
 请求的参数上都带着一个`code`：
 
 ![image-20221229221314765](README.assets/image-20221229221314765.png)
