@@ -7,8 +7,13 @@ h.interceptors.request.use((function (e) {
                     }
                 ));
             var t = l()().get("next-i18next")
+                // 获取当前时间的字符串
                 , n = Date.now().toString()
+                // 对当前时间字符串拼接一个固定字符，然后再加上自身的一部分作为MD5
+                // 不用纠结为啥是这个逻辑，只要把时间传给服务器服务器能复现成一样的即可
+                // 此处的o()就是一个md5
                 , r = o()(n + "9527" + n.substr(0, 6));
+            // 然后这里把n，也就是计算code用到的时间字符串传给服务器
             if (e.data.timestamp = n,
                 e.data.code = r,
                 e.data.platform = "web_pc",
